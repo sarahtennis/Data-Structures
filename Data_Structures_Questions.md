@@ -14,10 +14,13 @@ O(1), constant time for value return
 ## Binary Search Tree
 
 1. What is the runtime complexity of `insert`? 
+O(n), n is depth of tree. At worst runs as many times as there are tree nodes (all left or all right, with no balancing).
 
 2. What is the runtime complexity of `contains`?
+O(n), n is depth of tree.
 
 3. What is the runtime complexity of `get_max`? 
+O(n), n is depth of right branch
 
 ## Heap
 
