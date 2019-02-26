@@ -48,8 +48,14 @@ class DoublyLinkedList:
     # current_head = self.head
     # self.head = ListNode(value, None, current_head)
     # current_head.prev = self.head
-    self.head.insert_before(value)
-    self.head = self.head.prev
+    try:
+      self.head.insert_before(value)
+      self.head = self.head.prev
+    except:
+      self.tail = ListNode(value)
+      self.head = self.tail
+
+    
 
   # removes the head node and returns the value stored in it
   # ------- NOTES -------
@@ -74,8 +80,12 @@ class DoublyLinkedList:
   # ------- NOTES -------
   # insert_after on tail, reassign tail
   def add_to_tail(self, value):
-    self.tail.insert_after(value)
-    self.tail = self.tail.next
+    try:
+      self.tail.insert_after(value)
+      self.tail = self.tail.next
+    except:
+      self.tail = ListNode(value)
+      self.head = self.tail
 
 
   # removes the tail node and returns the value stored in it
