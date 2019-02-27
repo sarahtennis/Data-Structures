@@ -25,14 +25,19 @@ O(n), n is depth of right branch
 ## Heap
 
 1. What is the runtime complexity of `_bubble_up`?
+O(n), n is depth from node up to parent
 
 2. What is the runtime complexity of `_sift_down`?
+O(n), n is depth from node to lowest child
 
 3. What is the runtime complexity of `insert`?
+O(n), it is O(1) for list append and O(n) from calling _bubble_up
 
 4. What is the runtime complexity of `delete`?
+O(n), it is O(1) for pop() and O(n) for _sift_down. Best case O(1) if heap is empty or has 1 element
 
 5. What is the runtime complexity of `get_max`?
+O(1), constant time to access index of list
 
 ## Doubly Linked List
 
